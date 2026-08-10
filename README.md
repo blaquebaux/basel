@@ -24,10 +24,28 @@ The base correlation study found US banks are ~0.8-0.95 one factor across every 
 - Rate/curve sensitivity — banks' dominant macro driver; measure and optionally hedge it.
 - Cross-tier / global — the mildly-distinct pockets (global ADRs, community banks) the base identified.
 
-Nothing above is implemented or validated. This is the map, not the territory.
+## Research — first pass done
+
+Full detail in [`research/README.md`](research/README.md). The scorecard:
+
+| # | Question | Verdict |
+|---|----------|---------|
+| 1 | Are banks really one factor? | ✅ **confirmed** — 17 banks = 1.5 eff-bets, corr 0.80, 81% one factor |
+| 2 | What *is* the bank factor? | ✅ economy + short duration (beta-SPY +1.1, beta-TLT −0.5, +curve) |
+| 3a | Stock-picking within banks? | ❌ null — nothing to pick |
+| 3b | Timing the factor? | ❌ null — trend loses, rate-overlay < buy&hold |
+
+**The synthesis (and the completed Bio↔Basel pair):** prudential regulation homogenizes banks
+into one factor — the exact mirror of biotech's FDA-driven idiosyncrasy — and that factor is
+the economy plus the yield curve (banks = long economy, short duration). Neither stock-picking
+nor naive timing yields systematic alpha. Together, **Bio and Basel bound when cross-sectional
+alpha is possible**: it needs dispersion that is both high *and* price-predictable — biotech has
+the first without the second, banks have neither. Basel's value is as a coherent **macro sleeve**
+(an equity curve/rates expression), not a price-alpha source.
 
 ## Status
-**Scaffold.** Engine wired as a submodule; strategy research not yet conducted.
+**Research: first pass complete** (`research/`). No price-alpha keeper (correctly); a coherent
+macro/known-beta sleeve. No live driver; nothing validated to the spine's bar.
 
 ## The Blaque Baux family
 This repo is one sleeve of the **Blaque Baux** family — a single governed engine steered in
@@ -37,7 +55,7 @@ base/blueprint and holds the [full family roster](https://github.com/Carter-Warr
 ## Layout
 ```
 engine/     the Blaque Baux platform (git submodule -> Carter-Warrens/blaquebaux)
-research/   Path-A strategy sketches (to come)
+research/   three Path-A sketches (one-factor structure, rate/curve identity, tradeability null) + scorecard
 live/       governed live drivers (once a sleeve graduates to paper A/B)
 ```
 
