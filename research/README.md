@@ -1,7 +1,7 @@
 # Blaque Baux Basel — research
 
 First-pass Path-A research on the regulated-bank sleeve — the deliberate mirror of
-[Bio](https://github.com/blaque-baux/bio). All sketches read Alpaca SIP daily
+[Bio](https://github.com/blaquebaux/bio). All sketches read Alpaca SIP daily
 bars, are read-only, and print their own results. 2016–2026, on the base study's bank tier
 ladder.
 
